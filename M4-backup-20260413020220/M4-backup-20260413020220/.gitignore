@@ -1,0 +1,24 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+.Python
+pip-wheel-metadata/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# VSCode
+.vscode/
