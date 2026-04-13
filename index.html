@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Test Page</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#fff;--accent:#2563eb}
+    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:#0f172a}
+    .wrap{max-width:900px;margin:48px auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    h1{margin:0;font-size:1.4rem}
+    .card{background:var(--card);border-radius:12px;padding:20px;margin-top:18px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
+    footer{margin-top:18px;font-size:0.9rem;color:#475569}
+    pre{background:#0f172a;color:#fff;padding:12px;border-radius:8px;overflow:auto}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Project Test Page</h1>
+      <nav><a class="cta" href="#" id="demoBtn">Click me</a></nav>
+    </header>
+
+    <section class="card">
+      <p>This is a minimal test page for quick UI checks. Use the button to run a small demo script.</p>
+      <p><strong>Quick status:</strong> <span id="status">Ready</span></p>
+      <pre id="log">Console output will appear here.</pre>
+    </section>
+
+    <footer>
+      <small>Built for testing — modify as needed.</small>
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById('demoBtn');
+    const log = document.getElementById('log');
+    const status = document.getElementById('status');
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const msg = 'Button clicked at ' + new Date().toLocaleTimeString();
+      log.textContent = msg + '\n' + log.textContent;
+      status.textContent = 'Clicked';
+    });
+  </script>
+</body>
+</html>
