@@ -18,7 +18,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/M4
+          server-dir: /public_html/march4orthdesign.com/M4
           exclude: |
             **/.git*
             **/.git*/**
